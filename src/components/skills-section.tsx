@@ -53,17 +53,15 @@ export default function SkillsSection() {
   }, []);
 
   const technicalSkills = [
-    { skill: "Flutter", percentage: 80 },
+    { skill: "React", percentage: 100 },
     { skill: "FlutterFlow", percentage: 90 },
     { skill: "WordPress", percentage: 90 },
-    { skill: "Java", percentage: 80 },
-
   ];
 
   const designSkills = [
-    { skill: "Android Studio", percentage: 90 },
-    { skill: "VS Code ", percentage: 85 },
-    { skill: "Git/GitHub", percentage: 80 },
+    
+    { skill: "VS Code ", percentage: 95 },
+    { skill: "Git/GitHub", percentage: 95 },
     { skill: "Firbase", percentage: 90 },
   ];
 

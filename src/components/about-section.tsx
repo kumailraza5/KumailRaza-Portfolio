@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Download } from "lucide-react";
 
 interface CounterProps {
   end: number;
@@ -17,16 +16,14 @@ function Counter({ end, duration = 2 }: CounterProps) {
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
       setCount(Math.floor(progress * end));
-      
+
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
       }
     };
 
     animationFrame = requestAnimationFrame(animate);
-    
     return () => cancelAnimationFrame(animationFrame);
   }, [end, duration]);
 
@@ -35,13 +32,6 @@ function Counter({ end, duration = 2 }: CounterProps) {
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
-
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
-    link.download = 'MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
-    link.click();
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -84,7 +74,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <img
-                src="/pp.jpg"
+                src="/pp.jpeg"
                 alt="Kumail Raza professional photo"
                 className="rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl h-[400px] w-auto object-cover"
                 data-testid="about-image"
@@ -98,11 +88,11 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <h3 className="text-2xl font-semibold gradient-text" data-testid="about-subtitle">
-                Associate Developer
+                Professional Developer
               </h3>
+
               <p className="text-gray-300 text-lg leading-relaxed" data-testid="about-description-1">
-                I am an Associate Flutter & FlutterFlow Developer with a strong foundation in building cross-platform mobile applications. Skilled in Firebase and Firestore for authentication, real-time databases, and scalable backends, I focus on creating clean, user-friendly, and performance-driven apps. I am continuously improving my expertise by working on projects that integrate modern tools, APIs, and cloud services, with the goal of growing as a professional developer and contributing to impactful solutions in the tech industry.
-              </p>
+I am a versatile Frontend Developer specializing in React, FlutterFlow, and WordPress, with a strong foundation in building high-performance and user-centric digital experiences. I excel at creating responsive websites and cross-platform applications that combine clean design with robust functionality. Skilled in Firebase, Firestore, and modern APIs, I focus on delivering scalable solutions with seamless integrations. My goal is to continuously grow as a professional developer by working on impactful projects that blend innovation, design, and technology to help businesses stand out in the digital world.              </p>
 
               {/* Stats Counter */}
               <motion.div
@@ -117,37 +107,20 @@ export default function AboutSection() {
                   </div>
                   <div className="text-gray-400">Projects</div>
                 </div>
+
                 <div className="text-center" data-testid="stat-years">
                   <div className="text-3xl font-bold gradient-text">
                     {isVisible && <Counter end={1} />}
                   </div>
                   <div className="text-gray-400">Years</div>
                 </div>
+
                 <div className="text-center" data-testid="stat-clients">
                   <div className="text-3xl font-bold gradient-text">
                     {isVisible && <Counter end={0} />}
                   </div>
                   <div className="text-gray-400">Clients</div>
                 </div>
-              </motion.div>
-
-              {/* Download CV Button */}
-              <motion.div
-                className="mt-8"
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.0 }}
-              >
-                <motion.button
-                  onClick={handleDownloadCV}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  data-testid="button-download-cv-about"
-                >
-                  <Download size={20} />
-                  Download CV
-                </motion.button>
               </motion.div>
             </motion.div>
           </div>

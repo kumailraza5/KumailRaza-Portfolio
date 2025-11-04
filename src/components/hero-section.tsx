@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Download } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const handleNavClick = (href: string) => {
@@ -7,13 +7,6 @@ export default function HeroSection() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
-    link.download = 'MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
-    link.click();
   };
 
   return (
@@ -42,7 +35,7 @@ export default function HeroSection() {
             data-testid="hero-avatar"
           >
             <img
-              src="/dp.jpg"
+              src="/dp.png"
               alt="Professional headshot"
               className="w-full h-full object-cover"
             />
@@ -65,7 +58,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.6 }}
             data-testid="hero-subtitle"
           >
-            Associate Flutter & FlutterFlow Developer
+            Professional React & Wordpress Developer
           </motion.p>
 
           <motion.div
@@ -83,16 +76,7 @@ export default function HeroSection() {
             >
               View My Work
             </motion.button>
-            <motion.button
-              onClick={handleDownloadCV}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              data-testid="button-download-cv"
-            >
-              <Download size={20} />
-              Download CV
-            </motion.button>
+
             <motion.button
               onClick={() => handleNavClick("#contact")}
               className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

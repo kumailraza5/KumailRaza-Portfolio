@@ -22,8 +22,8 @@ const projects: Project[] = [
     title: "Food Delivery App",
     description: "Huber Eats is a modern Food Delivery UI Kit with 60+ clean and user-friendly screens for restaurants, groceries, and delivery services.",
     image: "/huber_eats.png",
-    category: "Flutter",
-    technologies: ["Flutter", "Dart", "Firebase"],
+    category: "FlutterFlow",
+    technologies: ["FlutterFLow", "Dart", "Firebase"],
     links: { 
       github: "https://github.com/kumail-raza/huber-eats", 
       view: "https://your-demo-link.com/huber-eats" 
@@ -35,7 +35,7 @@ const projects: Project[] = [
     description: "BeautyMart UI Kit is a stylish e-commerce App for beauty and cosmetics apps, offering product discovery, detailed product pages, reviews, seamless checkout, and order management with a clean pink-accented design.",
     image: "/beauty_mart.png",
     category: "FlutterFlow",
-    technologies: ["Flutter", "Dart", "Firebase"],
+    technologies: ["FlutterFlow", "Dart", "Firebase"],
     links: { 
       github: "https://your-flutterflow.com/beauty-mart", 
       view: "https://your-demo-link.com/beauty-mart" 
@@ -75,8 +75,9 @@ export default function PortfolioSection() {
 
   const filters = [
     { key: "all", label: "All" },
-    { key: "Flutter", label: "Flutter" },
-    { key: "FlutterFlow", label: "FlutterFlow" },
+    { key: "Flutter", label: "React" },
+    { key: "FlutterFlow", label: "FlutterFLow" },
+    { key: "Wordpress", label: "Wordpress" },
   ];
 
   return (
@@ -94,7 +95,7 @@ export default function PortfolioSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             data-testid="portfolio-title"
           >
-            My Portfolio
+            My Projects
           </motion.h2>
 
           {/* Portfolio Filter */}
