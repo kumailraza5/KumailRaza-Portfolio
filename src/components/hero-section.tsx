@@ -58,7 +58,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.6 }}
             data-testid="hero-subtitle"
           >
-            Professional React & Wordpress Developer
+            Professional React, Wordpress & Webflow Developer
           </motion.p>
 
           <motion.div

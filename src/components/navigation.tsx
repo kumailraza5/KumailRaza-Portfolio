@@ -30,7 +30,7 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             className="flex-shrink-0"
           >
-            <h1 className="text-xl font-bold gradient-text" data-testid="nav-logo">Kumail Raza</h1>
+            <h1 className="text-xl font-bold gradient-text">Kumail Raza</h1>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -43,7 +43,6 @@ export default function Navigation() {
                   className="hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  data-testid={`nav-${item.label.toLowerCase()}`}
                 >
                   {item.label}
                 </motion.button>
@@ -57,7 +56,6 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-400 hover:text-white focus:outline-none"
               whileTap={{ scale: 0.95 }}
-              data-testid="mobile-menu-button"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
@@ -73,17 +71,18 @@ export default function Navigation() {
           opacity: isMobileMenuOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="md:hidden bg-gray-800 overflow-hidden"
-        data-testid="mobile-menu"
+        className="md:hidden overflow-hidden"
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div
+          className="mx-3 mt-2 mb-4 rounded-xl bg-gray-800/95 backdrop-blur-lg border border-gray-700/50 shadow-lg p-3 space-y-2"
+        >
           {navItems.map((item) => (
             <motion.button
               key={item.href}
               onClick={() => handleNavClick(item.href)}
-              className="block w-full text-left hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium"
-              whileHover={{ x: 10 }}
-              data-testid={`mobile-nav-${item.label.toLowerCase()}`}
+              className="block w-full text-left px-4 py-3 rounded-lg text-base font-medium bg-gray-900/40 hover:bg-blue-600/30 hover:text-blue-400 transition-all duration-300 shadow-sm"
+              whileHover={{ x: 8 }}
+              whileTap={{ scale: 0.97 }}
             >
               {item.label}
             </motion.button>

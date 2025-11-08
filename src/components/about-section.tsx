@@ -68,6 +68,7 @@ export default function AboutSection() {
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Desktop / Laptop Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
@@ -76,7 +77,7 @@ export default function AboutSection() {
               <img
                 src="/pp.jpeg"
                 alt="Kumail Raza professional photo"
-                className="rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl h-[400px] w-auto object-cover"
+                className="rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl h-[400px] w-auto object-cover hidden md:block"
                 data-testid="about-image"
               />
             </motion.div>
@@ -92,7 +93,17 @@ export default function AboutSection() {
               </h3>
 
               <p className="text-gray-300 text-lg leading-relaxed" data-testid="about-description-1">
-I am a versatile Frontend Developer specializing in React, FlutterFlow, and WordPress, with a strong foundation in building high-performance and user-centric digital experiences. I excel at creating responsive websites and cross-platform applications that combine clean design with robust functionality. Skilled in Firebase, Firestore, and modern APIs, I focus on delivering scalable solutions with seamless integrations. My goal is to continuously grow as a professional developer by working on impactful projects that blend innovation, design, and technology to help businesses stand out in the digital world.              </p>
+                I am a versatile Full Stack Developer and a partner member at{" "}
+                <a
+                  href="https://klystra-agency-tol9.onrender.com/" // <-- Klystra Agency website link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 underline hover:text-blue-300"
+                >
+                  Klystra Agency
+                </a>
+                , specializing in building responsive websites with React and the MERN stack, WordPress websites, and cross-platform applications using FlutterFlow. With a strong foundation in creating high-performance, user-centric digital experiences, I have worked with 12 clients on various projects. Skilled in Firebase, Firestore, backend development, and modern APIs, I deliver scalable solutions with seamless integrations, combining clean design with robust functionality.
+              </p>
 
               {/* Stats Counter */}
               <motion.div
@@ -103,21 +114,21 @@ I am a versatile Frontend Developer specializing in React, FlutterFlow, and Word
               >
                 <div className="text-center" data-testid="stat-projects">
                   <div className="text-3xl font-bold gradient-text">
-                    {isVisible && <Counter end={2} />}
+                    {isVisible && <Counter end={20} />}
                   </div>
                   <div className="text-gray-400">Projects</div>
                 </div>
 
                 <div className="text-center" data-testid="stat-years">
                   <div className="text-3xl font-bold gradient-text">
-                    {isVisible && <Counter end={1} />}
+                    {isVisible && <Counter end={3} />}
                   </div>
                   <div className="text-gray-400">Years</div>
                 </div>
 
                 <div className="text-center" data-testid="stat-clients">
                   <div className="text-3xl font-bold gradient-text">
-                    {isVisible && <Counter end={0} />}
+                    {isVisible && <Counter end={12} />}
                   </div>
                   <div className="text-gray-400">Clients</div>
                 </div>
