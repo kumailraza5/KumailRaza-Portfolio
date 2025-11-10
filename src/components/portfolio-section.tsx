@@ -214,7 +214,7 @@ const projects: Project[] = [
       view: "https://www.saam.swiss/fr/",
     },
   },
-  id: 17,
+  { id: 17,
     title: "realestateinusa-Demo Project for Client",
     description:
       "A clean and modern real-estate website demo built for realestateinusa. Showcases property listings, agency info, and a contact form for leads. Designed for easy navigation, mobile-friendly, and ready for client branding and customization.",
