@@ -214,6 +214,17 @@ const projects: Project[] = [
       view: "https://www.saam.swiss/fr/",
     },
   },
+  id: 17,
+    title: "realestateinusa-Demo Project for Client",
+    description:
+      "A clean and modern real-estate website demo built for realestateinusa. Showcases property listings, agency info, and a contact form for leads. Designed for easy navigation, mobile-friendly, and ready for client branding and customization.",
+    image: "/realestateinusa.png",
+    category: "Webflow",
+    technologies: ["Framer", "HTML5", "CSS3", "JavaScript"],
+    links: {
+      view: "https://realestateinusa.framer.website/",
+    },
+  },
 ];
 
 export default function PortfolioSection() {
