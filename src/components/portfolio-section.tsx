@@ -50,7 +50,7 @@ const projects: Project[] = [
     category: "React",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
     links: {
-      github: "https://your-flutterflow.com/beauty-mart",
+      github: "https://github.com/kumailraza5/carshowroom_UI",
       view: "https://carshowroom-ws42.onrender.com/",
     },
   },
@@ -100,7 +100,7 @@ const projects: Project[] = [
     category: "React",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
     links: {
-      github: "https://your-flutterflow.com/beauty-mart",
+      github: "https://github.com/kumailraza5/Saloon_Web_UI",
       view: "https://saloon-app-kiic.onrender.com/",
     },
   },
@@ -137,7 +137,7 @@ const projects: Project[] = [
     category: "React",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
     links: {
-      github: "https://your-flutterflow.com/beauty-mart",
+      github: "https://github.com/kumailraza5/Bakery_APP_Pink",
       view: "https://bakery-app-ui-pinktheme-1.onrender.com/",
     },
   },
@@ -150,7 +150,7 @@ const projects: Project[] = [
     category: "React",
     technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
     links: {
-      github: "https://your-flutterflow.com/beauty-mart",
+      github: "https://github.com/kumailraza5/Bakery_APP_Purple",
       view: "https://bakery-app-ui-purpletheme.onrender.com/",
     },
   },
