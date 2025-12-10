@@ -93,16 +93,7 @@ export default function AboutSection() {
               </h3>
 
               <p className="text-gray-300 text-lg leading-relaxed" data-testid="about-description-1">
-                I am a versatile Full Stack Developer and a partner member at{" "}
-                <a
-                  href="https://klystra-agency-tol9.onrender.com/" // <-- Klystra Agency website link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 underline hover:text-blue-300"
-                >
-                  Klystra Agency
-                </a>
-                , specializing in building responsive websites with React and the MERN stack, WordPress websites, and cross-platform applications using FlutterFlow. With a strong foundation in creating high-performance, user-centric digital experiences, I have worked with 12 clients on various projects. Skilled in Firebase, Firestore, backend development, and modern APIs, I deliver scalable solutions with seamless integrations, combining clean design with robust functionality.
+               I’m Kumail, a versatile Full Stack Developer with strong expertise in React, the MERN stack, WordPress, and FlutterFlow for cross-platform app development. I’ve successfully worked with 12+ clients, building responsive, high-performance, and user-focused digital products. From modern frontend interfaces to scalable backend systems using Firebase, Firestore, and custom APIs, I deliver complete end-to-end solutions with seamless integrations. My focus is always on clean design, smooth functionality, and reliable delivery—helping clients turn their ideas into powerful, ready-to-grow digital experiences.
               </p>
 
               {/* Stats Counter */}
